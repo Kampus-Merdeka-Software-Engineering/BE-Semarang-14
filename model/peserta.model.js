@@ -32,9 +32,10 @@ const Peserta = sequelize.define(
         no_hp: {
             type: DataTypes.STRING,
         },
-    },
-    {
-        timestamps: false,
+        bergabung_pada: {
+            type: DataTypes.DATE,
+            defaultValue: Sequelize.NOW,
+        },
     }
 );
 

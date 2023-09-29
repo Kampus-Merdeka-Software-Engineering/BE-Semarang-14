@@ -31,9 +31,6 @@ const Course = sequelize.define(
             type: DataTypes.STRING,
         },
     },
-    {
-        timestamps: false,
-    }
 );
 
 // create table if not exists
