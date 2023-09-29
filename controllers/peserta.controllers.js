@@ -20,7 +20,7 @@ exports.postPeserta = async (req, res) => {
 
         // send response
         res.status(200).send({
-            message: 'success',
+            message: 'add peserta success',
             data: peserta,
         });
     } catch (err) {

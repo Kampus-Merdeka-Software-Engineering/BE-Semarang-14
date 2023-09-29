@@ -9,7 +9,7 @@ exports.getAllCourses = async (req, res) => {
     try {
         const courses = await Course.findAll();
         res.status(200).send({
-            message: 'success',
+            message: 'get all courses success',
             data: courses,
         });
     } catch (err) {
