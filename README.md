@@ -8,7 +8,10 @@
 npm install
 ```
 
-#### 2. Copy .env.example or rename the .env.example file to .env
+#### 2. Import Database
+Import database in folder `db` to your database server
+
+#### 3. Copy .env.example or rename the .env.example file to .env
 ```
 cp .env.example .env
 ```
@@ -19,7 +22,7 @@ Edit the configuration inside .env, for example:
 
 In the example above we create database named sipkuwi-dinbudpar which runs on Localhost (127.0.0.1) on port 3306
 
-#### 3. Run the server
+#### 4. Run the server
 ```
 npm run dev
 ```
