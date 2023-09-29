@@ -20,7 +20,7 @@ Edit the configuration inside .env, for example:
 - DB_NAME=learn4u
 - DB_PORT=3306
 
-In the example above we create database named sipkuwi-dinbudpar which runs on Localhost (127.0.0.1) on port 3306
+In the example above we create database named learn4u which runs on Localhost (127.0.0.1) on port 3306
 
 #### 4. Run the server
 ```
