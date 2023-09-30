@@ -5,8 +5,20 @@ const sequelize = require('../config/db_config');
 const Course = require('../model/course.model');
 const Peserta = require('../model/peserta.model');
 
+// drop table if exists
+(async () => {
+    await Peserta.drop();
+    await Course.drop();
+})();
+
+// create table if not exists
+(async () => {
+    await Course.sync();
+    await Peserta.sync();
+})();
+
 // Seeder data Course
-const courseSeed = [
+const courseSeeds = [
     {
         id: 'C001',
         nama: 'UI/UX Design',
@@ -44,9 +56,9 @@ sequelize.sync()
         await Course.bulkCreate(courseSeeds); // seed new course data to database
 
         // End Process
-        process.exit(0); // Keluar dari proses setelah selesai
+        process.exit(0); // Exit with success
     })
     .catch((err) => {
         console.error('Error:', err);
-        process.exit(1); // Keluar dengan kode kesalahan
+        process.exit(1); // Exit with error
     });
