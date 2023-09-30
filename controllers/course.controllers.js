@@ -32,3 +32,23 @@ exports.getCourseById = async (req, res) => {
         res.json({ message: err });
     }
 };
+
+// get 3 best courses
+exports.getBestCourses = async (req, res) => {
+    try {
+        const courses = await Course.findAll({
+            order: [
+                ['jumlah_peserta', 'DESC'],
+                ['rating', 'DESC'],
+            ],
+            limit: 3,
+        });
+        res.status(200).send({
+            message: 'get three courses success',
+            data: courses,
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Terjadi kesalahan dalam mengambil data kursus.' });
+    }
+};

@@ -21,14 +21,17 @@ const Course = sequelize.define(
         deskripsi_panjang: {
             type: DataTypes.STRING,
         },
+        photo: {
+            type: DataTypes.STRING,
+        },
         rating: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.DECIMAL(2, 1),
         },
         harga: {
             type: DataTypes.INTEGER,
         },
-        photo: {
-            type: DataTypes.STRING,
+        jumlah_peserta: {
+            type: DataTypes.INTEGER,
         },
     },
 );
