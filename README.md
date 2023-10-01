@@ -15,6 +15,8 @@ cp .env.example .env
 Edit the configuration inside .env, for example:
 - DB_HOST=127.0.0.1
 - DB_NAME=learn4u
+- DB_USER=(your database username)
+- DB_PASSWORD=(your database password)
 - DB_PORT=3306
 
 In the example above we create database named learn4u which runs on Localhost (127.0.0.1) on port 3306
