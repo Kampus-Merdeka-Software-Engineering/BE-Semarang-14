@@ -5,7 +5,7 @@ const express = require('express');
 const router = express.Router();
 
 // import controller
-const courseController = require('../controllers/course.controllers');
+const courseController = require('../controllers/courses.controllers');
 
 // define routes
 router.get('/home/best_courses', courseController.getBestCourses); // get all courses

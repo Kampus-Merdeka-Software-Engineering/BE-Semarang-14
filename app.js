@@ -13,7 +13,7 @@ app.listen(port, () => {
 });
 
 // Import routes
-const courseRoutes = require('./routes/course.routes.js');
+const courseRoutes = require('./routes/courses.routes.js');
 const homeRoutes = require('./routes/home.routes.js');
 
 // Use routes

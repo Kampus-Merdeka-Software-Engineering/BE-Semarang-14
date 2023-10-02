@@ -5,7 +5,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/db_config');
 
 // import model
-const Course = require('../model/course.model');
+const Course = require('../model/courses.model');
 
 // create model
 const Peserta = sequelize.define(

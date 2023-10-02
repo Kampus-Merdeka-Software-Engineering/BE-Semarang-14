@@ -5,7 +5,7 @@ const express = require('express');
 const router = express.Router();
 
 // import controller
-const courseController = require('../controllers/course.controllers');
+const courseController = require('../controllers/courses.controllers');
 const pesertaController = require('../controllers/peserta.controllers');
 
 // define routes

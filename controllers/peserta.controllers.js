@@ -3,7 +3,7 @@ const sequelize = require('../config/db_config');
 
 // import model
 const Peserta = require('../model/peserta.model');
-const Course = require('../model/course.model');
+const Course = require('../model/courses.model');
 
 // post peserta
 exports.postPeserta = async (req, res) => {

@@ -2,7 +2,7 @@
 const sequelize = require('../config/db_config');
 
 // import model
-const Course = require('../model/course.model');
+const Course = require('../model/courses.model');
 
 // get all courses
 exports.getAllCourses = async (req, res) => {
