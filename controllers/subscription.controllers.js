@@ -8,13 +8,28 @@ const Subscription = require('../model/subscription.model');
 exports.postSubscription = async (req, res) => {
     try {
         //get data from body
-        const { id_subscription, email, joined_at } = req.body;
+        const { email } = req.body;
+
+        // input validation
+        if (!email) {
+            return res.status(400).send({
+                message: 'email is required',
+            });
+        }
+        // validation: email
+        else if (typeof email !== 'string') {
+            return res.status(400).send({
+                message: 'email must be a string',
+            });
+        } else if (!email.includes('@')) {
+            return res.status(400).send({
+                message: 'email must be valid',
+            });
+        }
 
         // insert data
         const subscription = await Subscription.create({
-            id_subscription,
             email,
-            joined_at,
         });
 
         // send response

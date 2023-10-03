@@ -8,11 +8,45 @@ const Pesan = require('../model/pesan.model');
 exports.postPesan = async (req, res) => {
     try {
         // get data from body
-        const { id_pesan, nama, email, subject, message } = req.body;
+        const { nama, email, subject, message } = req.body;
+
+        // input validation
+        if (!nama || !email || !subject || !message) {
+            return res.status(400).send({
+                message: 'nama, email, subject, message are required',
+            });
+        }
+        // validation: nama
+        else if (typeof nama !== 'string') {
+            return res.status(400).send({
+                message: 'nama must be a string',
+            });
+        }
+        // validation: email
+        else if (typeof email !== 'string') {
+            return res.status(400).send({
+                message: 'email must be a string',
+            });
+        } else if (!email.includes('@')) {
+            return res.status(400).send({
+                message: 'email must be valid',
+            });
+        }
+        // validation: subject
+        else if (typeof subject !== 'string') {
+            return res.status(400).send({
+                message: 'subject must be a string',
+            });
+        }
+        // validation: message
+        else if (typeof message !== 'string') {
+            return res.status(400).send({
+                message: 'message must be a string',
+            });
+        }
 
         // insert data
         const pesan = await Pesan.create({
-            id_pesan,
             nama,
             email,
             subject,

@@ -11,6 +11,39 @@ exports.postPeserta = async (req, res) => {
         // get data from body
         const { id_course, nama, email, no_hp } = req.body;
 
+        // input validation
+        if (!id_course || !nama || !email || !no_hp) {
+            return res.status(400).send({
+                message: 'id_course, nama, email, no_hp are required',
+            });
+        } 
+        // validation: nama
+        else if (typeof nama !== 'string') {
+            return res.status(400).send({
+                message: 'nama must be a string',
+            });
+        } 
+        // validation: email
+        else if (typeof email !== 'string') {
+            return res.status(400).send({
+                message: 'email must be a string',
+            });
+        } else if (!email.includes('@')) {
+            return res.status(400).send({
+                message: 'email must be valid',
+            });
+        }
+        // validation: no_hp
+        else if (typeof no_hp !== 'string') {
+            return res.status(400).send({
+                message: 'no_hp must be a string',
+            });
+        } else if (no_hp.length < 10 || no_hp.length > 13) {
+            return res.status(400).send({
+                message: 'no_hp must be valid',
+            });
+        }
+
         // insert data
         const peserta = await Peserta.create({
             id_course,
