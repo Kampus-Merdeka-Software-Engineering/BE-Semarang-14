@@ -23,8 +23,18 @@ const courseSeeds = [
         id: 'C001',
         nama: 'UI/UX Design',
         deskripsi_singkat: 'UI/UX Design dapat membantu peserta mempersiapkan diri untuk berkarir di industri desain digital yang terus berkembang dan memberikan pemahaman yang mendalam tentang bagaimana menciptakan pengalaman pengguna yang luar biasa di dunia digital.',
-        deskripsi_panjang: 'Kursus UI/UX Design adalah program pelatihan yang dirancang khusus untuk membekali peserta dengan pemahaman mendalam dan keterampilan yang diperlukan untuk sukses di dunia desain digital. <br> Ini adalah langkah awal yang penting bagi mereka yang ingin mempersiapkan diri untuk berkarir di industri desain digital yang terus berkembang. <br> Dalam kursus ini, peserta akan diajarkan bagaimana menciptakan pengalaman pengguna yang luar biasa di lingkungan digital, dengan fokus khusus pada antarmuka pengguna (UI) dan desain pengalaman pengguna (UX).\n\nBerikut adalah rangkaian hal yang akan Anda pelajari dan lakukan selama kursus UI/UX Design:\n\n- Pengenalan UI/UX\n- Prototyping dan Desain Wireframe\n- Memperkenalkan Alat Desain\n- Portofolio dan Presentasi',
-        photo: '',
+        deskripsi_panjang: `
+        Kursus UI/UX Design adalah program pelatihan yang dirancang khusus untuk membekali peserta dengan pemahaman mendalam dan keterampilan yang diperlukan untuk sukses di dunia desain digital. <br> 
+        Dalam kursus ini, peserta akan diajarkan bagaimana menciptakan pengalaman pengguna yang luar biasa di lingkungan digital, dengan fokus khusus pada antarmuka pengguna (UI) dan desain pengalaman pengguna (UX). <br>
+        Berikut adalah rangkaian hal yang akan Anda pelajari dan lakukan selama kursus UI/UX Design:
+        <ol>
+        <li>Pengenalan UI/UX</li>
+        <li>Prototyping dan Desain Wireframe </li>
+        <li>Memperkenalkan Alat Desain</li>
+        <li>Portofolio dan Presentasi</li>
+        </ol>
+        `,
+        photo: 'course-image.png',
         rating: 9.8,
         harga: 4000000,
         jumlah_peserta: 100,
@@ -33,8 +43,19 @@ const courseSeeds = [
         id: 'C002',
         nama: 'Software Engineering',
         deskripsi_singkat: 'Kejar salah satu karir paling tangguh di bidang Teknologi sebagai Insinyur Perangkat Lunak dengan pemahaman komprehensif tentang pengembangan web front-end hingga back-end.',
-        deskripsi_panjang: 'Kursus Rekayasa Perangkat Lunak adalah suatu program pelatihan yang bertujuan untuk mempersiapkan peserta dengan pengetahuan, keterampilan, dan pemahaman yang komprehensif dalam pengembangan perangkat lunak. <br> Dalam kursus ini, peserta akan diarahkan untuk mencapai salah satu karier paling tangguh dan menjanjikan di dunia teknologi, yaitu menjadi seorang Insinyur Perangkat Lunak yang mampu mengelola seluruh spektrum pengembangan perangkat lunak, mulai dari sisi front-end hingga back-end. <br> \n\nBerikut adalah rangkaian hal yang akan Anda pelajari dan lakukan selama kursus Rekayasa Perangkat Lunak:\n\n- Dasar-dasar Pemrograman\n- Pengembangan Front-End\n- Pengembangan Back-End\n- Pengembangan Aplikasi Web Full-Stack\n- Proyek-proyek Praktis',
-        photo: '',
+        deskripsi_panjang: `
+        Kursus Software Engineering adalah suatu program pelatihan yang bertujuan untuk mempersiapkan peserta dengan pengetahuan, keterampilan, dan pemahaman yang komprehensif dalam pengembangan perangkat lunak. <br>
+        Dalam kursus ini, peserta akan diarahkan untuk mencapai salah satu karier paling tangguh dan menjanjikan di dunia teknologi, yaitu menjadi seorang Insinyur Perangkat Lunak yang mampu mengelola seluruh spektrum pengembangan perangkat lunak, mulai dari sisi front-end hingga back-end. <br>
+        Berikut adalah rangkaian hal yang akan Anda pelajari dan lakukan selama kursus Rekayasa Perangkat Lunak:
+        <ol>
+        <ul>Dasar-dasar Pemrograman</ul>
+        <ul>Pengembangan Front-End</ul>
+        <ul>Pengembangan Back-End</ul>
+        <ul>Pengembangan Aplikasi Web Full-Stack</ul>
+        <ul>Proyek-proyek Praktis</ul>
+        </ol>
+        `,
+        photo: 'course-image2.png',
         rating: 9.9,
         harga: 5000000,
         jumlah_peserta: 80,
@@ -42,12 +63,90 @@ const courseSeeds = [
     {
         id: 'C003',
         nama: 'Data Analyst',
-        deskripsi_singkat: 'Gunakan keahlian analisis data, pola pikir bisnis, dan keterampilan komunikasi Anda serta jawab pertanyaan bisnis yang kompleks dengan data.',
-        deskripsi_panjang: 'Kursus Data Analyst adalah program pelatihan yang dirancang khusus untuk membekali peserta dengan keterampilan dan pengetahuan yang diperlukan untuk menjadi seorang profesional yang sukses di bidang analisis data. <br> Dalam kursus ini, Anda akan dibimbing untuk mengembangkan kemampuan analisis data yang kuat, pola pikir bisnis yang terarah, serta keterampilan komunikasi yang efektif untuk menjawab pertanyaan bisnis yang kompleks dengan menggunakan data sebagai alat utama.<br>\n\n Berikut adalah beberapa hal yang akan Anda pelajari dan lakukan selama kursus Data Analyst:\n\n- Analisis Data Mendalam\n- Pemahaman Bisnis\n- Visualisasi Data\n- Machine Learning\n- Proyek-proyek Praktis\n- Menggunakan Alat Analisis Data',
-        photo: '',
+        deskripsi_singkat: 'Manfaatkan dengan sebaik-baiknya keahlian Anda dalam analisis data, pola pikir bisnis, dan keterampilan komunikasi untuk menghadapi tantangan bisnis yang kompleks.',
+        deskripsi_panjang: `
+        Kursus Data Analyst adalah program pelatihan yang dirancang khusus untuk membekali peserta dengan keterampilan dan pengetahuan yang diperlukan untuk menjadi seorang profesional yang sukses di bidang analisis data. <br>
+        Dalam kursus ini, Anda akan dibimbing untuk mengembangkan kemampuan analisis data yang kuat, pola pikir bisnis yang terarah, serta keterampilan komunikasi yang efektif untuk menjawab pertanyaan bisnis yang kompleks dengan menggunakan data sebagai alat utama.<br>
+        Berikut adalah beberapa hal yang akan Anda pelajari dan lakukan selama kursus Data Analyst:
+        <ol>
+        <li>Analisis Data Mendalam</li>
+        <li>Pemahaman Bisnis</li>
+        <li>Visualisasi Data</li>
+        <li>Machine Learning</li>
+        <li>Proyek-proyek Praktis</li>
+        <li>Menggunakan Alat Analisis Data</li>
+        </ol>
+        `,
+        photo: 'course-image3.png',
         rating: 9.8,
         harga: 2000000,
         jumlah_peserta: 120,
+    },
+    {
+        id: 'C004',
+        nama: 'Desain Grafis',
+        deskripsi_singkat: 'bergabunglah dalam kursus desain grafis kami. <br> Mari bersama-sama menjelajahi kreativitas dan mengasah keterampilan desain grafis kita bersama instruktur ahli dalam lingkungan yang inspiratif.',
+        deskripsi_panjang: `
+        Kursus Desain Grafis adalah peluang luar biasa untuk memasuki dunia desain yang penuh kreativitas dan mengasah keterampilan desain grafis Anda.<br>
+        Dalam kursus ini, kami akan mengajak Anda untuk memperdalam pemahaman tentang desain grafis, mengembangkan bakat kreatif Anda, dan mengasah keterampilan Anda bersama instruktur yang ahli dalam lingkungan yang penuh inspirasi.<br>
+        Berikut adalah rangkaian hal yang akan Anda pelajari dan alami selama kursus Desain Grafis:
+        <ol>
+        <li>Pengantar ke Desain Grafis</li>
+        <li>Prinsip-prinsip Desain</li>
+        <li>Alat Desain</li>
+        <li>Etika Desain Grafis</li>
+        <li>Presentasi dan Portofolio</li>
+        </ol>
+        `,
+        photo: 'course-image4.png',
+        rating: 9.8,
+        harga: 3000000,
+        jumlah_peserta: 100,
+    },
+    {
+        id: 'C005',
+        nama: 'AI untuk Produksi Video',
+        deskripsi_singkat: 'Kursus AI kami yang khusus dirancang untuk membantu Anda mengubah cara Anda memproduksi video! <br> Mari pelajari cara memanfaatkan kecerdasan buatan untuk meningkatkan efisiensi, kreativitas, dan kualitas dalam pembuatan video Anda.',
+        deskripsi_panjang: `
+        Kursus AI untuk Produksi Video adalah sebuah perjalanan eksplorasi yang menakjubkan dirancang khusus untuk membekali Anda dengan pengetahuan dan keterampilan yang diperlukan untuk mengubah cara Anda memproduksi video. <br>
+        Di dunia yang semakin berkembang pesat, teknologi kecerdasan buatan (AI) telah menjadi kunci dalam meningkatkan efisiensi, kreativitas, dan kualitas dalam pembuatan video.<br>
+        Berikut adalah rangkaian hal yang akan Anda pelajari dan alami selama kursus AI untuk Produksi Video:
+        <ol>
+        <li>Pengenalan ke AI dalam Produksi Video</li>
+        <li>Analisis Data Video</li>
+        <li>Pengeditan Video Otomatis</li>
+        <li>Enhancement Visual</li>
+        <li>Personalisasi Konten</li>
+        <li>Proyek-proyek Praktis</li>
+        </ol>
+        `,
+        photo: 'course-image5.png',
+        rating: 9.8,
+        harga: 2000000,
+        jumlah_peserta: 110,
+    },
+    {
+        id: 'C006',
+        nama: 'Digital Marketing',
+        deskripsi_singkat: 'Mari kita eksplorasi bersama strategi pemasaran online terbaru, alat-alat digital, dan praktik terbaik <br> untuk meraih kesuksesan dalam dunia pemasaran di era digital.',
+        deskripsi_panjang: 
+        `
+        Kursus Digital Marketing adalah sebuah perjalanan mendalam yang akan membawa Anda ke dalam dunia yang dinamis dan terus berkembang dari pemasaran online di era digital.<br>
+        Ini adalah kesempatan unik untuk meraih pemahaman yang mendalam tentang strategi pemasaran terkini.<br>
+        Berikut adalah rangkaian hal yang akan Anda pelajari dan alami selama kursus Digital Marketing:
+        <ol>
+        <li>Pengantar ke Digital Marketing</li>
+        <li>Pemahaman Konsumen Digital</li>
+        <li>Pemahaman Konsumen Digital</li>
+        <li>Strategi Pemasaran Digital</li>
+        <li>Media Sosial</li>
+        <li>Tren Terbaru</li>
+        </ol>
+        `,
+        photo: 'course-image6.png',
+        rating: 9.8,
+        harga: 1500000,
+        jumlah_peserta: 80,
     }
 ];
 
