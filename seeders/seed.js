@@ -4,6 +4,9 @@ const sequelize = require('../config/db_config');
 // import model
 const Course = require('../model/courses.model');
 const Peserta = require('../model/peserta.model');
+const Pesan = require('../model/pesan.model');
+const Subscription = require('../model/subscription.model');
+const Testimonial = require('../model/testimonial.model');
 
 // drop table if exists and create table
 (async () => {
@@ -148,6 +151,30 @@ const courseSeeds = [
         rating: 9.8,
         harga: 1500000,
         jumlah_peserta: 80,
+    }
+];
+
+const testiSeeds = [
+    {
+        id_testimonial: '1',
+        nama: 'Andi',
+        email: 'andi@gmail.com',
+        photo: 'course-image.png',
+        testimoni: 'Sangat membantu dan memudahkan UI/UX Design',
+    },
+    {
+        id_testimonial: '2',
+        nama: 'Budi',
+        email: 'budi@gmail.com',
+        photo: 'course-image2.png',
+        testimoni: 'Sangat membantu dan memudahkan Software Engineering',
+    },
+    {
+        id_testimonial: '1',
+        nama: 'Christian',
+        email: 'chris@gmail.com',
+        photo: 'course-image3.png',
+        testimoni: 'Sangat membantu dan memudahkan dalam memahami Data Analyst',
     }
 ];
 
