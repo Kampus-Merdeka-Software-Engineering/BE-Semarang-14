@@ -10,21 +10,22 @@ const mysql = require('mysql2/promise');
 
 // create database if not exists
 mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
 }).then((connection) => {
-    connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME};`);
+    connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.MYSQLDATABASE};`);
 });
 
 // Sequelize connection
 const sequelize = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_USER,
-    process.env.DB_PASSWORD,
+    process.env.MYSQLDATABASE,
+    process.env.MYSQLUSER,
+    process.env.MYSQLPASSWORD,
     {
         dialect: 'mysql',
-        host: process.env.DB_HOST,
+        host: process.env.MYSQLHOST,
+        port: process.env.MYSQLPORT,
         define: {
             timestamps: false,
         },
