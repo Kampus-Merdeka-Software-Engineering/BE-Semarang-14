@@ -6,9 +6,13 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+// Import cors
+const cors = require('cors');
+app.use(cors());
+
 // Listen to port 3000 by default
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`Server berjalan di port ${port}`);
 });
 
