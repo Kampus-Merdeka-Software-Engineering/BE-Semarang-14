@@ -14,11 +14,13 @@ app.listen(port, () => {
 
 // Import routes
 const courseRoutes = require('./routes/courses.routes.js');
-const homeRoutes = require('./routes/home.routes.js');
+const homeRoutes = require('./routes/testimonial.routes.js');
+const pesertaRoutes = require('./routes/peserta.routes.js');
 
 // Use routes
 app.use('/api', courseRoutes);
 app.use('/api', homeRoutes);
+app.use('/api', pesertaRoutes);
 
 // Handle not found routes
 app.use((req, res) => {

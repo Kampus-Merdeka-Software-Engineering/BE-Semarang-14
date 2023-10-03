@@ -18,10 +18,10 @@ const Peserta = sequelize.define(
         },
         id_course: {
             type: DataTypes.STRING,
-            references: {
-                model: Course,
-                key: 'id',
-            },
+            // references: {
+            //     model: Course,
+            //     key: 'id',
+            // },
         },
         nama: {
             type: DataTypes.STRING,

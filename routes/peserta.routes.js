@@ -5,10 +5,10 @@ const express = require('express');
 const router = express.Router();
 
 // import controller
-const courseController = require('../controllers/courses.controllers');
+const pesertaController = require('../controllers/peserta.controllers');
 
 // define routes
-router.get('/home/best_courses', courseController.getBestCourses); // get all courses
+router.post('/peserta', pesertaController.postPeserta); // post peserta
 
 // export router
 module.exports = router;
