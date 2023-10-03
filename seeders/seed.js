@@ -12,6 +12,9 @@ const Testimonial = require('../model/testimonial.model');
 (async () => {
     await Course.drop();
     await Peserta.drop();
+    await Pesan.drop();
+    await Subscription.drop();
+    await Testimonial.drop();
 }
 )();
 
@@ -19,6 +22,10 @@ const Testimonial = require('../model/testimonial.model');
 (async () => {
     await Course.sync();
     await Peserta.sync();
+    await Pesan.sync();
+    await Subscription.sync();
+    await Testimonial.sync();
+    
 })();
 
 // Seeder data Course
@@ -154,23 +161,21 @@ const courseSeeds = [
     }
 ];
 
+// Seeder data Testimonial
 const testiSeeds = [
     {
-        id_testimonial: '1',
         nama: 'Andi',
         email: 'andi@gmail.com',
         photo: 'course-image.png',
         testimoni: 'Sangat membantu dan memudahkan UI/UX Design',
     },
     {
-        id_testimonial: '2',
         nama: 'Budi',
         email: 'budi@gmail.com',
         photo: 'course-image2.png',
         testimoni: 'Sangat membantu dan memudahkan Software Engineering',
     },
     {
-        id_testimonial: '1',
         nama: 'Christian',
         email: 'chris@gmail.com',
         photo: 'course-image3.png',
@@ -184,6 +189,10 @@ sequelize.sync()
         // Course Seeder
         await Course.destroy({ where: {} }); // delete all existing rows in the "Course" table
         await Course.bulkCreate(courseSeeds); // seed new course data to database
+
+        // Testimonial Seeder
+        await Testimonial.destroy({ where: {} }); // delete all existing rows in the "Testimonial" table
+        await Testimonial.bulkCreate(testiSeeds); // seed new testimonial data to database
 
         // End Process
         process.exit(0); // Exit with success
