@@ -19,7 +19,7 @@ const Course = sequelize.define(
             type: DataTypes.STRING,
         },
         deskripsi_panjang: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
         },
         photo: {
             type: DataTypes.STRING,

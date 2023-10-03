@@ -5,11 +5,12 @@ const sequelize = require('../config/db_config');
 const Course = require('../model/courses.model');
 const Peserta = require('../model/peserta.model');
 
-// drop table if exists
+// drop table if exists and create table
 (async () => {
-    await Peserta.drop();
     await Course.drop();
-})();
+    await Peserta.drop();
+}
+)();
 
 // create table if not exists
 (async () => {
