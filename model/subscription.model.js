@@ -8,7 +8,7 @@ const sequelize = require('../config/db_config');
 const Subscription = sequelize.define (
     'subscription',
     {
-        id_subscription: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -16,7 +16,7 @@ const Subscription = sequelize.define (
         email: {
             type: DataTypes.STRING,
         },
-        joined_at: {
+        bergabung_pada: {
             type: DataTypes.DATE,
             defaultValue: Sequelize.NOW,
         },

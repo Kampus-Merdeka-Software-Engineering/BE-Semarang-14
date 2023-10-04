@@ -8,19 +8,17 @@ const sequelize = require('../config/db_config');
 const Testimonial = sequelize.define (
     'testimonial',
     {
-        id_testimonial: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        nama: {
-            type: DataTypes.STRING,
-        },
-        email: {
-            type: DataTypes.STRING,
-        },
-        photo: {
-            type: DataTypes.STRING,
+        id_peserta: {
+            type: DataTypes.INTEGER,
+            // references: {
+            //     model: Course,
+            //     key: 'id',
+            // },
         },
         testimoni: {
             type: DataTypes.STRING,

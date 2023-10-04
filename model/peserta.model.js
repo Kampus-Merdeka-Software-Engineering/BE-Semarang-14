@@ -32,6 +32,10 @@ const Peserta = sequelize.define(
         no_hp: {
             type: DataTypes.STRING,
         },
+        photo: {
+            type: DataTypes.STRING,
+            defaultValue: 'default_peserta.jpg',
+        },
         bergabung_pada: {
             type: DataTypes.DATE,
             defaultValue: Sequelize.NOW,
