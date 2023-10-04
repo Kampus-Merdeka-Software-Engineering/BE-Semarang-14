@@ -8,14 +8,14 @@ const { Sequelize } = require('sequelize');
 // import mysql2
 const mysql = require('mysql2/promise');
 
-// create database if not exists
-mysql.createConnection({
-    host: process.env.MYSQLHOST,
-    user: process.env.MYSQLUSER,
-    password: process.env.MYSQLPASSWORD,
-}).then((connection) => {
-    connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.MYSQLDATABASE};`);
-});
+// // create database if not exists
+// mysql.createConnection({
+//     host: process.env.MYSQLHOST,
+//     user: process.env.MYSQLUSER,
+//     password: process.env.MYSQLPASSWORD,
+// }).then((connection) => {
+//     connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.MYSQLDATABASE};`);
+// });
 
 // Sequelize connection
 const sequelize = new Sequelize(

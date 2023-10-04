@@ -9,14 +9,14 @@ const Subscription = require('../model/subscription.model');
 const Testimonial = require('../model/testimonial.model');
 
 // drop table if exists and create table
-(async () => {
-    await Course.drop();
-    await Peserta.drop();
-    await Pesan.drop();
-    await Subscription.drop();
-    await Testimonial.drop();
-}
-)();
+// (async () => {
+//     await Course.drop();
+//     await Peserta.drop();
+//     await Pesan.drop();
+//     await Subscription.drop();
+//     await Testimonial.drop();
+// }
+// )();
 
 // create table if not exists
 (async () => {
@@ -25,7 +25,6 @@ const Testimonial = require('../model/testimonial.model');
     await Pesan.sync();
     await Subscription.sync();
     await Testimonial.sync();
-    
 })();
 
 // Seeder data Course
