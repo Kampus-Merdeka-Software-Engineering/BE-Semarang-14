@@ -18,7 +18,6 @@ app.listen(port, "0.0.0.0", () => {
 
 // Import routes
 const courseRoutes = require('./routes/courses.routes.js');
-// const homeRoutes = require('./routes/testimonial.routes.js');
 const pesertaRoutes = require('./routes/peserta.routes.js');
 const pesanRoutes = require('./routes/pesan.routes.js');
 const subscriptionRoutes = require('./routes/subscription.routes.js');
@@ -26,7 +25,6 @@ const testimonialRoutes = require('./routes/testimonial.routes.js');
 
 // Use routes
 app.use('/api', courseRoutes);
-app.use('/api', homeRoutes);
 app.use('/api', pesertaRoutes);
 app.use('/api', pesanRoutes);
 app.use('/api', subscriptionRoutes);

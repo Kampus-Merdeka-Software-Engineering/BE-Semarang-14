@@ -59,11 +59,11 @@ const courseSeeds = [
         Dalam kursus ini, peserta akan diarahkan untuk mencapai salah satu karier paling tangguh dan menjanjikan di dunia teknologi, yaitu menjadi seorang Insinyur Perangkat Lunak yang mampu mengelola seluruh spektrum pengembangan perangkat lunak, mulai dari sisi front-end hingga back-end. <br>
         Berikut adalah rangkaian hal yang akan Anda pelajari dan lakukan selama kursus Rekayasa Perangkat Lunak:
         <ol>
-        <ul>Dasar-dasar Pemrograman</ul>
-        <ul>Pengembangan Front-End</ul>
-        <ul>Pengembangan Back-End</ul>
-        <ul>Pengembangan Aplikasi Web Full-Stack</ul>
-        <ul>Proyek-proyek Praktis</ul>
+        <li>Dasar-dasar Pemrograman</li>
+        <li>Pengembangan Front-End</li>
+        <li>Pengembangan Back-End</li>
+        <li>Pengembangan Aplikasi Web Full-Stack</li>
+        <li>Proyek-proyek Praktis</li>
         </ol>
         `,
         photo: 'course-image2.png',
@@ -164,20 +164,24 @@ const courseSeeds = [
 // Seeder data Peserta
 const pesertaSeeds = [
     {
+        id_course: 'C001',
         nama: 'Nita',
         email: 'nita@gmail.com',
         no_hp: '081234567890',
         photo: 'user1.jpg',
     },
     {
+        id_course: 'C002',
         nama: 'Alex',
         email: 'alex@gmail.com',
         no_hp: '081234567891',
         photo: 'user2.jpg',
     },
     {
+        id_course: 'C003',
         nama: 'Christian',
         email: 'chris@gmail.com',
+        no_hp: '081234567892',
     }
 ]
 
