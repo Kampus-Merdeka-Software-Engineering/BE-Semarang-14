@@ -12,6 +12,9 @@ const Testimonial = require('../model/testimonial.model');
 (async () => {
     await Course.drop();
     await Peserta.drop();
+    await Pesan.drop();
+    await Subscription.drop();
+    await Testimonial.drop();
 }
 )();
 
@@ -19,6 +22,10 @@ const Testimonial = require('../model/testimonial.model');
 (async () => {
     await Course.sync();
     await Peserta.sync();
+    await Pesan.sync();
+    await Subscription.sync();
+    await Testimonial.sync();
+    
 })();
 
 // Seeder data Course
@@ -154,26 +161,42 @@ const courseSeeds = [
     }
 ];
 
-const testiSeeds = [
+// Seeder data Peserta
+const pesertaSeeds = [
     {
-        id_testimonial: '1',
-        nama: 'Andi',
-        email: 'andi@gmail.com',
-        photo: 'course-image.png',
-        testimoni: 'Sangat membantu dan memudahkan UI/UX Design',
+        nama: 'Nita',
+        email: 'nita@gmail.com',
+        no_hp: '081234567890',
+        photo: 'user1.jpg',
     },
     {
-        id_testimonial: '2',
-        nama: 'Budi',
-        email: 'budi@gmail.com',
-        photo: 'course-image2.png',
-        testimoni: 'Sangat membantu dan memudahkan Software Engineering',
+        nama: 'Alex',
+        email: 'alex@gmail.com',
+        no_hp: '081234567891',
+        photo: 'user2.jpg',
     },
     {
-        id_testimonial: '1',
         nama: 'Christian',
         email: 'chris@gmail.com',
-        photo: 'course-image3.png',
+    }
+]
+
+// Seeder data Testimonial
+const testiSeeds = [
+    {
+        id_peserta: 1,
+        testimoni: `“Saya sangat bersyukur telah bergabung dengan Learn4U,
+        dan saya merasa bahwa keputusan ini telah membantu saya meningkatkan pengetahuan saya.
+        Terima kasih Learn4U atas semua yang telah Anda lakukan untuk membantu saya mencapai tujuan belajar saya!”`,
+    },
+    {
+        id_peserta: 2,
+        testimoni: `“Saya sangat merekomendasikan Learn4U!!
+        kepada siapa pun yang ingin memperdalam pengetahuan dan keterampilan mereka. 
+        Ini adalah investasi yang sangat berharga untuk masa depan Anda!.”`,
+    },
+    {
+        id_peserta: 3,
         testimoni: 'Sangat membantu dan memudahkan dalam memahami Data Analyst',
     }
 ];
@@ -184,6 +207,14 @@ sequelize.sync()
         // Course Seeder
         await Course.destroy({ where: {} }); // delete all existing rows in the "Course" table
         await Course.bulkCreate(courseSeeds); // seed new course data to database
+
+        // Peserta Seeder
+        await Peserta.destroy({ where: {} }); // delete all existing rows in the "Peserta" table
+        await Peserta.bulkCreate(pesertaSeeds); // seed new peserta data to database
+
+        // Testimonial Seeder
+        await Testimonial.destroy({ where: {} }); // delete all existing rows in the "Testimonial" table
+        await Testimonial.bulkCreate(testiSeeds); // seed new testimonial data to database
 
         // End Process
         process.exit(0); // Exit with success

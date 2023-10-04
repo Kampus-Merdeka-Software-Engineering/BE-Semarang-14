@@ -27,7 +27,10 @@ exports.getCourseById = async (req, res) => {
                 id: req.params.id,
             },
         });
-        res.json(course);
+        res.status(200).send({
+            message: `get course with id ${req.params.id} success`,
+            data: course,
+        });
     } catch (err) {
         res.json({ message: err });
     }

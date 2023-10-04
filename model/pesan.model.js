@@ -8,7 +8,7 @@ const sequelize = require('../config/db_config');
 const Pesan = sequelize.define (
     'pesan',
     {
-        id_pesan: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
