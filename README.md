@@ -21,7 +21,7 @@ Edit the configuration inside .env, for example:
 
 In the example above we create database named learn4u which runs on Localhost (127.0.0.1) on port 3306
 
-#### 3. Import database with seeder
+#### 3. Import database with seeder if you dont have the database
 ```
 npm run seed
 ```
