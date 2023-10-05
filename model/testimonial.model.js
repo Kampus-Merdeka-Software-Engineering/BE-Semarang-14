@@ -23,7 +23,7 @@ const Testimonial = sequelize.define (
         testimoni: {
             type: DataTypes.STRING,
         },
-    }
+    },
 );
 
 // // create table if not exists

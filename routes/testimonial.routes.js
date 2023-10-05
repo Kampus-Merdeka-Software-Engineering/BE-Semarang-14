@@ -8,8 +8,8 @@ const router = express.Router();
 const testimonialController = require('../controllers/testimonial.controllers');
 
 // define routes
-router.post('testimonial', testimonialController.getAllTestimonial);    // get all testimonial
-router.post('testimonial/:id', testimonialController.getTestimonialById); // get testimonial by id
+router.get('/testimonial', testimonialController.getAllTestimonial);    // get all testimonial
+router.get('/testimonial/:id', testimonialController.getTestimonialById); // get testimonial by id
 
 // export router
 module.exports = router;
