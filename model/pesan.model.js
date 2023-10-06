@@ -23,7 +23,7 @@ const Pesan = sequelize.define (
             type: DataTypes.STRING,
         },
         message: {
-            type: DataTypes.STRING, 
+            type: DataTypes.TEXT, 
         },
     }
 );

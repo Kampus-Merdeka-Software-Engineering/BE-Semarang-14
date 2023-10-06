@@ -21,7 +21,7 @@ const Testimonial = sequelize.define (
             // },
         },
         testimoni: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
         },
     },
 );
