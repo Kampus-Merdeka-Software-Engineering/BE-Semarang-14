@@ -79,3 +79,21 @@ exports.postPeserta = async (req, res) => {
         console.log(err);
     }
 };
+
+// get peseerta by id
+exports.getPesertaById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const peserta = await Peserta.findOne({
+            where: {
+                id,
+            },
+        });
+        res.status(200).send({
+            message: 'get peserta by id success',
+            data: peserta,
+        });
+    } catch (err) {
+        console.log(err);
+    }
+};
