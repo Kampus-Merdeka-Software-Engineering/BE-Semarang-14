@@ -23,6 +23,9 @@ const Testimonial = sequelize.define (
         testimoni: {
             type: DataTypes.TEXT,
         },
+        rating: {
+            type: DataTypes.INTEGER,
+        },
     },
 );
 
