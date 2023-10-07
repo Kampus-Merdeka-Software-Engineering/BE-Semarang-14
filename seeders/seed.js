@@ -191,16 +191,19 @@ const testiSeeds = [
         testimoni: `“Saya sangat bersyukur telah bergabung dengan Learn4U,
         dan saya merasa bahwa keputusan ini telah membantu saya meningkatkan pengetahuan saya.
         Terima kasih Learn4U atas semua yang telah Anda lakukan untuk membantu saya mencapai tujuan belajar saya!”`,
+        rating: 5,
     },
     {
         id_peserta: 2,
         testimoni: `“Saya sangat merekomendasikan Learn4U!!
         kepada siapa pun yang ingin memperdalam pengetahuan dan keterampilan mereka. 
         Ini adalah investasi yang sangat berharga untuk masa depan Anda!.”`,
+        rating: 5,
     },
     {
         id_peserta: 3,
         testimoni: 'Sangat membantu dan memudahkan dalam memahami Data Analyst',
+        rating: 4,
     }
 ];
 
