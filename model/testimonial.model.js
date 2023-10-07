@@ -4,6 +4,9 @@ const { Sequelize, DataTypes } = require('sequelize');
 // import db config
 const sequelize = require('../config/db_config');
 
+// import model
+const Peserta = require('../model/peserta.model');
+
 // create model
 const Testimonial = sequelize.define (
     'testimonial',
@@ -23,8 +26,17 @@ const Testimonial = sequelize.define (
         testimoni: {
             type: DataTypes.TEXT,
         },
+        rating: {
+            type: DataTypes.INTEGER,
+        },
     },
 );
+
+Testimonial.belongsTo(Peserta, {
+    foreignKey: "id_peserta",
+    as: "pesertaDetails",
+    onDelete: "CASCADE",
+});
 
 // // create table if not exists
 // (async () => {

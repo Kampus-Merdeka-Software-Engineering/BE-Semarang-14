@@ -3,12 +3,20 @@ const sequelize = require('../config/db_config');
 
 // import model
 const Testimonial = require('../model/testimonial.model');
+const Peserta = require('../model/peserta.model');
 
 // get all testimonial random
 exports.getAllTestimonial = async (req, res) => {
     try {
         const testimonial = await Testimonial.findAll({
             order: sequelize.random(),
+            include: [
+                {
+                    model:Peserta,
+                    as: "pesertaDetails",
+                    attributes: ['nama', 'photo']
+                }
+            ]
         });
         res.status(200).send({
             message: 'get all testimonial success',
@@ -26,6 +34,13 @@ exports.getTwoTestimonial = async (req, res) => {
         const testimonial = await Testimonial.findAll({
             order: sequelize.random(),
             limit: 2,
+            include: [
+                {
+                    model:Peserta,
+                    as: "pesertaDetails",
+                    attributes: ['nama', 'photo']
+                }
+            ]
         });
         res.status(200).send({
             message: 'get 2 testimonial success',
@@ -35,3 +50,4 @@ exports.getTwoTestimonial = async (req, res) => {
         res.json({ message: err });
     }
 };
+
