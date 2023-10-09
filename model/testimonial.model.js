@@ -38,10 +38,5 @@ Testimonial.belongsTo(Peserta, {
     onDelete: "CASCADE",
 });
 
-// // create table if not exists
-// (async () => {
-//     await sequelize.sync();
-// })();
-
 // export model
 module.exports = Testimonial;
