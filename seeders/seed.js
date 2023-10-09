@@ -8,23 +8,13 @@ const Pesan = require('../model/pesan.model');
 const Subscription = require('../model/subscription.model');
 const Testimonial = require('../model/testimonial.model');
 
-// drop table if exists and create table
-// (async () => {
-//     await Course.drop();
-//     await Peserta.drop();
-//     await Pesan.drop();
-//     await Subscription.drop();
-//     await Testimonial.drop();
-// }
-// )();
-
 // create table if not exists
 (async () => {
     await Course.sync();
     await Peserta.sync();
+    await Testimonial.sync();
     await Pesan.sync();
     await Subscription.sync();
-    await Testimonial.sync();
 })();
 
 // Seeder data Course
@@ -163,6 +153,7 @@ const courseSeeds = [
 // Seeder data Peserta
 const pesertaSeeds = [
     {
+        id: 1,
         id_course: 'C001',
         nama: 'Nita',
         email: 'nita@gmail.com',
@@ -170,6 +161,7 @@ const pesertaSeeds = [
         photo: 'user1.jpg',
     },
     {
+        id: 2,
         id_course: 'C002',
         nama: 'Alex',
         email: 'alex@gmail.com',
@@ -177,6 +169,7 @@ const pesertaSeeds = [
         photo: 'user2.jpg',
     },
     {
+        id: 3,
         id_course: 'C003',
         nama: 'Christian',
         email: 'chris@gmail.com',
@@ -187,6 +180,7 @@ const pesertaSeeds = [
 // Seeder data Testimonial
 const testiSeeds = [
     {
+        id: 1,
         id_peserta: 1,
         testimoni: `“Saya sangat bersyukur telah bergabung dengan Learn4U,
         dan saya merasa bahwa keputusan ini telah membantu saya meningkatkan pengetahuan saya.
@@ -194,6 +188,7 @@ const testiSeeds = [
         rating: 5,
     },
     {
+        id: 2,
         id_peserta: 2,
         testimoni: `“Saya sangat merekomendasikan Learn4U!!
         kepada siapa pun yang ingin memperdalam pengetahuan dan keterampilan mereka. 
@@ -201,6 +196,7 @@ const testiSeeds = [
         rating: 5,
     },
     {
+        id: 3,
         id_peserta: 3,
         testimoni: 'Sangat membantu dan memudahkan dalam memahami Data Analyst',
         rating: 4,

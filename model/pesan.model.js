@@ -28,10 +28,5 @@ const Pesan = sequelize.define (
     }
 );
 
-// // create table if not exists
-// (async () => {
-//     await sequelize.sync();
-// })();
-
 // export model
 module.exports = Pesan;
