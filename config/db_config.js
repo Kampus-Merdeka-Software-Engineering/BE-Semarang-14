@@ -5,10 +5,8 @@ dotenv.config();
 // import sequelize
 const { Sequelize } = require('sequelize');
 
-// import mysql2
-const mysql = require('mysql2/promise');
-
-// // create database if not exists
+// // create database if not exists on localhost
+// const mysql = require('mysql2/promise');
 // mysql.createConnection({
 //     host: process.env.MYSQLHOST,
 //     user: process.env.MYSQLUSER,
