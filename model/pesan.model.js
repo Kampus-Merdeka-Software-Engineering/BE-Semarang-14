@@ -6,7 +6,7 @@ const sequelize = require('../config/db_config');
 
 // create model
 const Pesan = sequelize.define (
-    'pesan',
+    'message',
     {
         id: {
             type: DataTypes.INTEGER,
