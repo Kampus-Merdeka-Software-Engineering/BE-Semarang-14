@@ -27,6 +27,18 @@ exports.postSubscription = async (req, res) => {
             });
         }
 
+        // duplicate email validation
+        const isEmailExist = await Subscription.findOne({
+            where: {
+                email,
+            },
+        });
+        if (isEmailExist) {
+            return res.status(400).send({
+                message: 'email already exist',
+            });
+        }
+
         // insert data
         const subscription = await Subscription.create({
             email,
